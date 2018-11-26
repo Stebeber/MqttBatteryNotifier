@@ -1,0 +1,11 @@
+{
+    "mqttbroker": {
+        "server":"iot.eclipse.org",
+        "port": 1883,
+        "timeout": 60
+    },
+    "datapusher": {
+        "client_id": "DefaultMqttBatteryNotifier",
+        "interval": 30
+    }
+}
