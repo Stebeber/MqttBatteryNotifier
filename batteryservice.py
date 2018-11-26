@@ -1,6 +1,7 @@
 import psutil
 import paho.mqtt.client as mqtt
 import time
+import datetime
 import json
 
 def on_connect(client, userdata, flags, rc):
@@ -35,7 +36,7 @@ def main():
     while True:
         level = get_battery_level()
         result = client.publish("abcdefghijk/xxx", level)
-        print("Published level: " + str(level) + " with RC: " + str(result.rc))
+        print(str(datetime.datetime.now()) + ": Level: " + str(level) + " with RC: " + str(result.rc))
         time.sleep(conf_datapusher["interval"])  
 
 if __name__ == '__main__':
