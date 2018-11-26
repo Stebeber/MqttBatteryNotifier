@@ -26,11 +26,7 @@ def main():
         level = get_battery_level()
         client.publish("abcdefghijk/xxx", level)
         print("Published level: " + str(level))
-        time.sleep(3)
-        
-    while True:    
-        print("Other work is being done")
-        time.sleep(5)    
+        time.sleep(3)  
 
 if __name__ == '__main__':
    main()
