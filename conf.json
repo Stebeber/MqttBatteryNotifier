@@ -6,6 +6,7 @@
     },
     "datapusher": {
         "client_id": "DefaultMqttBatteryNotifier",
-        "interval": 30
+        "interval": 30,
+        "topic_batterylevel": "level"
     }
 }
